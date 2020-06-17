@@ -1,0 +1,12 @@
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/bin/Debug/netcoreapp3.1/PizzaParty.deps.json
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/bin/Debug/netcoreapp3.1/PizzaParty.runtimeconfig.json
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/bin/Debug/netcoreapp3.1/PizzaParty.runtimeconfig.dev.json
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/bin/Debug/netcoreapp3.1/PizzaParty.dll
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/bin/Debug/netcoreapp3.1/PizzaParty.pdb
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.csprojAssemblyReference.cache
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.AssemblyInfoInputs.cache
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.AssemblyInfo.cs
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.csproj.CoreCompileInputs.cache
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.dll
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.pdb
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.genruntimeconfig.cache
