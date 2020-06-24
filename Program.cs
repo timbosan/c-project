@@ -15,10 +15,11 @@ namespace PizzaParty
 
             if (ordered == "Y")
             {
-                Console.Write("Awesome! I'll have you pick a time slot for Friday.\n");
-                //string time = Console.ReadLine();
+                Console.Write("Awesome! I'll have you pick a time slot for Friday.\n\n\n");
+                
                 timelist();
                 
+                Toppings_Menu();
 
     
             }
@@ -44,29 +45,26 @@ namespace PizzaParty
             Console.WriteLine("Please select a time for your Pizza");
             Userchoice = Console.ReadLine();
             int UserChoiceasNUM = Int32.Parse(Userchoice);
-            Console.WriteLine("you chose the time slot: " + TimeSlots[UserChoiceasNUM -1].ToString());
+            Console.WriteLine("You chose the time slot: " + TimeSlots[UserChoiceasNUM -1] + ". \n\n\n".ToString());
         }
-    
+
+        public static void Toppings_Menu( )
+        {
+        string UserChoicetoppings;
+        string[] Toppings_Menu = {"Basil", "Hot Honey", "Italian Sausage", "Pepperoni", "Mushrooms", "Jalapenos", "Just Cheese"}; 
+        for(int i = 0; i < Toppings_Menu.Length; i++)
+            {
+              int displayCountertoppings = i+1;
+              Console.WriteLine( displayCountertoppings.ToString() + "). " + Toppings_Menu[i].ToString());
+            }
+              Console.WriteLine("Please select toppings for your Pizza!");
+            UserChoicetoppings = Console.ReadLine();
+            int UserChoicetoppingsasNUM = Int32.Parse(UserChoicetoppings);
+            Console.WriteLine("You these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
+            
+        }
     }
 }
 
 
 
- /*logic for selecting a timeslot
- 
- public static void list( )
-        {
-            string Userchoice;
-            string[] TimeSlots = {"1:00 - 2:00 ", "2:00 - 3:00", "3:00 - 4:00", "4:00 - 5:00"};
-            for(int i = 0; i < TimeSlots.Length; i++)
-            {
-              int displayCounter = i+1;
-              Console.WriteLine( displayCounter.ToString() + ").  " + TimeSlots[i].ToString());
-            }
-            Console.WriteLine("Please select a time for your Pizza");
-            Userchoice = Console.ReadLine();
-            int UserChoiceasNUM = Int32.Parse(Userchoice);
-            Console.WriteLine("you chose the time slot: " + TimeSlots[UserChoiceasNUM -1].ToString());
-        }
-
-        */
