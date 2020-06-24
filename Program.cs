@@ -33,7 +33,7 @@ namespace PizzaParty
         public static void list( )
         {
             string Userchoice;
-            string[] TimeSlots = {"1:00 - 2:00 ", "2:00 - 3:00", "3:00 - 4:00", "4:00 - 5:00"};
+            string[] TimeSlots = {"6:00 - 6:15 ", "6:15 - 6:30", "6:30 - 6:45", "6:45 - 7:00"};
             for(int i = 0; i < TimeSlots.Length; i++)
             {
               int displayCounter = i+1;
