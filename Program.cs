@@ -15,8 +15,10 @@ namespace PizzaParty
 
             if (ordered == "Y")
             {
-                Console.Write("Awesome! I'll have you pick a time slot for Friday.");
+                Console.Write("Awesome! I'll have you pick a time slot for Friday.\n");
                 //string time = Console.ReadLine();
+                timelist();
+                
 
     
             }
@@ -30,7 +32,7 @@ namespace PizzaParty
             
         }
    
-        public static void list( )
+        public static void timelist( )
         {
             string Userchoice;
             string[] TimeSlots = {"6:00 - 6:15 ", "6:15 - 6:30", "6:30 - 6:45", "6:45 - 7:00"};
