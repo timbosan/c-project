@@ -18,10 +18,14 @@ namespace PizzaParty
                 Console.Write("Awesome! I'll have you pick a time slot for Friday.\n\n\n");
                 
                 timelist();
-                
-                Toppings_Menu();
 
-    
+                Console.Write("Do you want any toppings besides cheese?   Y/N  \n\n\n");
+                string toppings = (Console.ReadLine()).ToUpper();
+            if (toppings == "Y")
+                Toppings_Menu();
+            
+            else
+                 Console.Write("Cheese Pizza it is!\n\n\n");
             }
 
             else
