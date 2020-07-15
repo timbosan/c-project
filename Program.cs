@@ -15,22 +15,22 @@ namespace PizzaParty
 
             if (ordered == "Y")
             {
-                Console.Write("Awesome! I'll have you pick a time slot for Friday.\n\n\n");
+                Console.Write("\nAwesome! I'll have you pick a time slot for Friday.\n\n\n");
                 
                 timelist();
 
-                Console.Write("Do you want any toppings besides cheese?   Y/N  \n\n\n");
+                Console.Write("\nDo you want any toppings besides cheese?   Y/N  \n\n\n");
                 string toppings = (Console.ReadLine()).ToUpper();
             if (toppings == "Y")
                 Toppings_Menu();
             
             else
-                 Console.Write("Cheese Pizza it is!\n\n\n");
+                 Console.Write("\nCheese Pizza it is!\n\n\n");
             }
 
             else
             {
-                Console.Write("Maybe next time, Have a great day!");
+                Console.Write("\nMaybe next time, Have a great day!");
             }
 
         
@@ -41,30 +41,30 @@ namespace PizzaParty
         {
             string Userchoice;
             string[] TimeSlots = {"6:00 - 6:15 ", "6:15 - 6:30", "6:30 - 6:45", "6:45 - 7:00"};
+            Console.WriteLine("\nPlease select a time for your Pizza\n");
             for(int i = 0; i < TimeSlots.Length; i++)
             {
               int displayCounter = i+1;
-              Console.WriteLine( displayCounter.ToString() + ").  " + TimeSlots[i].ToString());
+              Console.WriteLine('\n' + displayCounter.ToString() + ").  " + TimeSlots[i].ToString());
             }
-            Console.WriteLine("Please select a time for your Pizza");
             Userchoice = Console.ReadLine();
             int UserChoiceasNUM = Int32.Parse(Userchoice);
-            Console.WriteLine("You chose the time slot: " + TimeSlots[UserChoiceasNUM -1] + ". \n\n\n".ToString());
+            Console.WriteLine("\nYou chose the time slot: " + TimeSlots[UserChoiceasNUM -1] + ". \n\n\n".ToString());
         }
 
         public static void Toppings_Menu( )
         {
         string UserChoicetoppings;
         string[] Toppings_Menu = {"Basil", "Hot Honey", "Italian Sausage", "Pepperoni", "Mushrooms", "Jalapenos", "Just Cheese"}; 
+        Console.WriteLine("\nPlease select toppings for your Pizza!");
         for(int i = 0; i < Toppings_Menu.Length; i++)
             {
               int displayCountertoppings = i+1;
-              Console.WriteLine( displayCountertoppings.ToString() + "). " + Toppings_Menu[i].ToString());
+              Console.WriteLine('\n' + displayCountertoppings.ToString() + "). " + Toppings_Menu[i].ToString());
             }
-              Console.WriteLine("Please select toppings for your Pizza!");
             UserChoicetoppings = Console.ReadLine();
             int UserChoicetoppingsasNUM = Int32.Parse(UserChoicetoppings);
-            Console.WriteLine("You these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
+            Console.WriteLine("\nYou these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
             
         }
     }
