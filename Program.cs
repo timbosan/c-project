@@ -6,19 +6,21 @@ namespace PizzaParty
     {
         public static void Main()
         {
-            Console.Write("What is your name?  ");
+          
+            Console.Write("\nWhat is your name?  \n\nType 'EXIT' at anytime to exit the ordering app.\n>>");
             string name = Console.ReadLine();
+             //check each var at a read line for an exit
+            CheckForExit(name);
 
-            Console.Write("Hello " + name + " do you want to order a pizza?  Y/N  ");
+            Console.Write("Hello " + name + " do you want to order a pizza?  Y/N\n>>");
             string ordered = (Console.ReadLine()).ToUpper();
+            CheckForExit(ordered);
             
 
             if (ordered == "Y")
             {   
                 timelist();
                 Toppings_Menu();
-            
-          
             }
 
             else
@@ -42,6 +44,7 @@ namespace PizzaParty
               Console.WriteLine('\n' + displayCounter.ToString() + ").  " + TimeSlots[i].ToString());
             }
             Userchoice = Console.ReadLine();
+                CheckForExit(Userchoice);
             int UserChoiceasNUM = Int32.Parse(Userchoice);
             Console.WriteLine("\nYou chose the time slot: " + TimeSlots[UserChoiceasNUM -1] + ". \n\n\n".ToString());
         }
@@ -57,12 +60,27 @@ namespace PizzaParty
               Console.WriteLine('\n' + displayCountertoppings.ToString() + "). " + Toppings_Menu[i].ToString());
             }
             UserChoicetoppings = Console.ReadLine();
+                CheckForExit(UserChoicetoppings);
             int UserChoicetoppingsasNUM = Int32.Parse(UserChoicetoppings);
             Console.WriteLine("\nYou these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
             
         }
+
+        // if user enters exit close program 
+        public static void CheckForExit(string checker)
+        {
+            if(checker.ToUpper() == "EXIT")
+            {
+                Environment.Exit(1);
+            }
+            else
+            {
+                return;
+
+            }
+        }
     }
-}
+}    
 
 
 
