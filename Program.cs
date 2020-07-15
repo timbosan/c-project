@@ -14,9 +14,7 @@ namespace PizzaParty
             
 
             if (ordered == "Y")
-            {
-                Console.Write("\nAwesome! I'll have you pick a time slot for Friday.\n\n\n");
-                
+            {   
                 timelist();
 
                 Console.Write("\nDo you want any toppings besides cheese?   Y/N  \n\n\n");
@@ -41,6 +39,7 @@ namespace PizzaParty
         {
             string Userchoice;
             string[] TimeSlots = {"6:00 - 6:15 ", "6:15 - 6:30", "6:30 - 6:45", "6:45 - 7:00"};
+            Console.Write("\nAwesome! I'll have you pick a time slot for Friday.\n\n\n");
             Console.WriteLine("\nPlease select a time for your Pizza\n");
             for(int i = 0; i < TimeSlots.Length; i++)
             {
