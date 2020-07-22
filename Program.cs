@@ -21,15 +21,21 @@ namespace PizzaParty
 
             if (ordered == "Y")
             {
-                var CustomerTimeChoice = timelist();
-                var CustomerToppingChoices = Toppings_Menu();
-                var Overview = new PizzaOrder();
-                Overview.Name = name;
-                Overview.TimeSlot = CustomerTimeChoice;
-                Overview.Toppings = CustomerToppingChoices;
-                var Json = JsonConvert.SerializeObject(Overview);
-                System.IO.File.WriteAllText("order.Json", Json);
-                
+                while (true)
+                {
+                    var CustomerTimeChoice = timelist();
+                    var CustomerToppingChoices = Toppings_Menu();
+                    var Overview = new PizzaOrder();
+                    Overview.Name = name;
+                    Overview.TimeSlot = CustomerTimeChoice;
+                    Overview.Toppings = CustomerToppingChoices;
+                    var Json = JsonConvert.SerializeObject(Overview);
+                    System.IO.File.WriteAllText("order.Json", Json);
+                    Console.Write("Do you want to order another pizza?    Y/N\n>>");
+                    string AnotherPizza = (Console.ReadLine()).ToUpper();
+                    if (AnotherPizza == "N")
+                        break;
+                }
             }
 
             else
@@ -79,7 +85,9 @@ namespace PizzaParty
                 CheckForExit(UserChoicetoppings);
                 toppingOption = Int32.Parse(UserChoicetoppings);
                 CustomerToppingChoices.Add(Toppings_Menu[toppingOption - 1]);
-                Console.WriteLine("\nYou picked these toppings: " + Toppings_Menu[toppingOption - 1].ToString());
+                string CustomerToppingChoicesCombined = string.Join(", ", CustomerToppingChoices);
+                Console.WriteLine("\n>>These are your toppings so far: " + CustomerToppingChoicesCombined);
+                //Console.WriteLine("\nYou picked these toppings: " + Toppings_Menu[toppingOption - 1].ToString());
             }
             return CustomerToppingChoices;
         }
@@ -100,9 +108,9 @@ namespace PizzaParty
     }
     public class PizzaOrder
     {
-        public string Name{get;set;}
-        public List<string> Toppings{get;set;}
-        public string TimeSlot{get;set;}
+        public string Name { get; set; }
+        public List<string> Toppings { get; set; }
+        public string TimeSlot { get; set; }
     }
 }
 
