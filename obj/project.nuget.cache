@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bzccWsQuA+QrAkMrJB4cYmodiBOUNkc7jmk42iwXdOG9L/R8xzkh+q25VzmCzovpxtgYwV3X2XBFtK884J6cVg==",
+  "dgSpecHash": "WE0k7QwpqNpZIxA8RnrrReY7uwvo1+tPwREFpR9Q7IKzH5724NB59MOwCURzCOmqpWaq1IFfMvsIL50fnx+oFg==",
   "success": true,
   "projectFilePath": "/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/PizzaParty.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/timbosan/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

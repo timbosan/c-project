@@ -10,3 +10,5 @@
 /Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.dll
 /Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.pdb
 /Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.genruntimeconfig.cache
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/timbosan/Desktop/codelouisville/c#/PizzaParty/obj/Debug/netcoreapp3.1/PizzaParty.csproj.CopyComplete
