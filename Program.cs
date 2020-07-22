@@ -62,7 +62,7 @@ namespace PizzaParty
             UserChoicetoppings = Console.ReadLine();
                 CheckForExit(UserChoicetoppings);
             int UserChoicetoppingsasNUM = Int32.Parse(UserChoicetoppings);
-            Console.WriteLine("\nYou these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
+            Console.WriteLine("\nYou picked these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
         
         }
 
