@@ -34,7 +34,7 @@ namespace PizzaParty
    
         public static void timelist( )
         {
-            string Userchoice;
+            string UserChoice;
             string[] TimeSlots = {"6:00 - 6:15 ", "6:15 - 6:30", "6:30 - 6:45", "6:45 - 7:00"};
             Console.Write("\nAwesome! I'll have you pick a time slot for Friday.\n\n\n");
             Console.WriteLine("\nPlease select a time to pick up your Pizza\n");
@@ -43,9 +43,9 @@ namespace PizzaParty
               int displayCounter = i+1;
               Console.WriteLine('\n' + displayCounter.ToString() + ").  " + TimeSlots[i].ToString());
             }
-            Userchoice = Console.ReadLine();
-                CheckForExit(Userchoice);
-            int UserChoiceasNUM = Int32.Parse(Userchoice);
+            UserChoice = Console.ReadLine();
+                CheckForExit(UserChoice);
+            int UserChoiceasNUM = Int32.Parse(UserChoice);
             Console.WriteLine("\nYou chose the time slot: " + TimeSlots[UserChoiceasNUM -1] + ". \n\n\n".ToString());
         }
 
@@ -63,7 +63,7 @@ namespace PizzaParty
                 CheckForExit(UserChoicetoppings);
             int UserChoicetoppingsasNUM = Int32.Parse(UserChoicetoppings);
             Console.WriteLine("\nYou these toppings: " + Toppings_Menu[UserChoicetoppingsasNUM -1].ToString());
-            
+        
         }
 
         // if user enters exit close program 
