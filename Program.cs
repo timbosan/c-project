@@ -7,7 +7,11 @@ namespace PizzaParty
     class Program
     {
         public static void Main()
-        {
+        
+        { 
+            int orderNumber = 1;
+            while (true)
+            {
 
             Console.Write("\nWhat is your name?  \n\nType 'EXIT' at anytime to exit the ordering app.\n>>");
             string name = Console.ReadLine();
@@ -21,29 +25,34 @@ namespace PizzaParty
 
             if (ordered == "Y")
             {
+                
+                var CustomerTimeChoice = timelist();
+                var Overview = new PizzaOrder();
+                Overview.Name = name;
+                Overview.TimeSlot = CustomerTimeChoice;
+                Overview.Pizzas = new List<Pizza>();
                 while (true)
-                {
-                    var CustomerTimeChoice = timelist();
+                { 
+                    var Pizza = new Pizza();
                     var CustomerToppingChoices = Toppings_Menu();
-                    var Overview = new PizzaOrder();
-                    Overview.Name = name;
-                    Overview.TimeSlot = CustomerTimeChoice;
-                    Overview.Toppings = CustomerToppingChoices;
-                    var Json = JsonConvert.SerializeObject(Overview);
-                    System.IO.File.WriteAllText("order.Json", Json);
+                    Pizza.Toppings = CustomerToppingChoices;
                     Console.Write("Do you want to order another pizza?    Y/N\n>>");
                     string AnotherPizza = (Console.ReadLine()).ToUpper();
+                    Overview.Pizzas.Add(Pizza);
                     if (AnotherPizza == "N")
                         break;
                 }
+                 var Json = JsonConvert.SerializeObject(Overview);
+                    System.IO.File.WriteAllText("order_" + orderNumber + ".json", Json);
             }
 
             else
             {
                 Console.Write("\nMaybe next time, Have a great day!");
             }
-
-
+               
+                orderNumber++;
+            }
 
         }
 
@@ -109,10 +118,16 @@ namespace PizzaParty
     public class PizzaOrder
     {
         public string Name { get; set; }
-        public List<string> Toppings { get; set; }
+        public List<Pizza> Pizzas { get; set; }
         public string TimeSlot { get; set; }
     }
+
+    public class Pizza
+    {
+        public List<string> Toppings { get; set; }
+    }
 }
+
 
 
 
