@@ -44,6 +44,7 @@ namespace PizzaParty
                 }
                  var Json = JsonConvert.SerializeObject(Overview);
                     System.IO.File.WriteAllText("order_" + orderNumber + ".json", Json);
+                Environment.Exit(1);
             }
 
             else
