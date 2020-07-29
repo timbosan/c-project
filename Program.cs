@@ -76,11 +76,12 @@ namespace PizzaParty
             Console.WriteLine("\nYou chose the time slot: " + TimeSlots[UserChoiceasNUM - 1] + ". \n\n\n".ToString());
             return TimeSlots[UserChoiceasNUM - 1];
         }
-
+        //menu function
         public static List<string> Toppings_Menu()
         {
             List<string> CustomerToppingChoices = new List<string>();
             string UserChoicetoppings;
+            //need to fix bug where user can select 'finished adding' as a topping
             string[] Toppings_Menu = { "Basil", "Hot Honey", "Italian Sausage", "Pepperoni", "Mushrooms", "Jalapenos", "Just Cheese", "Finished Adding Toppings" };
             int toppingOption = 0;
             while (toppingOption != 8)
