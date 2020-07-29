@@ -1,4 +1,17 @@
-# c-project
-A pizza ordering app where friends can order a pizza with toppings they select as well as selecting a pick up time slot. 
--this product was builting using dotnet core
--use dotnet run from the root directory of the project
+Timothy's Pizza Ordering App
+
+This is a very basic app where the user can choose a Friday time slot to pick up pizza. After selecting a time slot the user will have the option to select from a list of toppings.
+
+Instructions:
+-Use Framework:netcoreapp3.1
+-App located in Program.cs 
+
+Project Requirements 
+-Program uses master loop program where user can exit or choose not to order a/another pizza to exit program 
+-Several functions are used and values are populated in JSON file for overview of order
+-The customer_topping_choices list is populated with the users toppings selecitons, these values are retrieved and placed in a string for the user to see.
+
+-Current number of commits: 21
+
+Future Implementations: 
+ -allow for user to enter email address to get copy of order
