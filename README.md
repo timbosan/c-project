@@ -5,6 +5,7 @@ This is a very basic app where the user can choose a time slot to pick up pizza.
 Instructions:
 -Use Framework:netcoreapp3.1
 -App located in Program.cs 
+-in terminal use command 'dotnet run' to run program
 
 Project Requirements 
 -Program uses master loop program where user can exit or choose not to order a/another pizza to exit program 

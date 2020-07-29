@@ -35,6 +35,8 @@ namespace PizzaParty
                 { 
                     var Pizza = new Pizza();
                     var CustomerToppingChoices = Toppings_Menu();
+                    string BadText = "Finished Adding Toppings";
+                    CustomerToppingChoices.RemoveAll(x => x.Contains(BadText));
                     Pizza.Toppings = CustomerToppingChoices;
                     Console.Write("Do you want to order another pizza?    Y/N\n>>");
                     string AnotherPizza = (Console.ReadLine()).ToUpper();
@@ -81,7 +83,6 @@ namespace PizzaParty
         {
             List<string> CustomerToppingChoices = new List<string>();
             string UserChoicetoppings;
-            //need to fix bug where user can select 'finished adding' as a topping
             string[] Toppings_Menu = { "Basil", "Hot Honey", "Italian Sausage", "Pepperoni", "Mushrooms", "Jalapenos", "Just Cheese", "Finished Adding Toppings" };
             int toppingOption = 0;
             while (toppingOption != 8)
@@ -96,6 +97,8 @@ namespace PizzaParty
                 CheckForExit(UserChoicetoppings);
                 toppingOption = Int32.Parse(UserChoicetoppings);
                 CustomerToppingChoices.Add(Toppings_Menu[toppingOption - 1]);
+                string BadText = "Finished Adding Toppings";
+                CustomerToppingChoices.RemoveAll(x => x.Contains(BadText));
                 string CustomerToppingChoicesCombined = string.Join(", ", CustomerToppingChoices);
                 Console.WriteLine("\n>>These are your toppings so far: " + CustomerToppingChoicesCombined);
                 //Console.WriteLine("\nYou picked these toppings: " + Toppings_Menu[toppingOption - 1].ToString());
